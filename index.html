@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MGS Los Angeles Pack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ff6f61;
+      --bg2: #ffcc70;
+      --text: #fff8f4;
+      --muted: #ffe6d0;
+      --card: rgba(255,255,255,0.08);
+      --accent: #ff8a5b;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--bg), var(--bg2));
+      color: var(--text);
+    }
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo { font-weight: 800; font-size: 1.5rem; }
+    nav a { margin: 0 10px; text-decoration: none; color: var(--text); font-weight: 600; }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; padding: 40px 0; }
+    .hero h1 { font-size: 2rem; }
+    .btn { background: var(--accent); padding: 12px 20px; border: none; border-radius: 30px; font-weight: 700; cursor: pointer; color: var(--text); }
+    .features, .testimonials, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    .feature, .testimonial { background: var(--card); padding: 15px; border-radius: var(--radius); }
+    .gallery img { width: 100%; border-radius: var(--radius); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    iframe { width: 100%; border: none; border-radius: var(--radius); aspect-ratio: 16/9; }
+    .price { font-size: 2rem; font-weight: bold; margin: 20px 0; }
+    footer { text-align: center; padding: 20px; color: var(--muted); font-size: 0.9rem; }
+    @media(max-width: 768px) { .hero { grid-template-columns: 1fr; text-align: center; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">MGS</div>
+      <nav>
+        <a href="index.html">Pack Graphique</a>
+        <a href="pack-son.html">Pack Son</a>
+        <a href="addons.html">Add-ons</a>
+        <a href="presets-reshade.html">Presets ReShade</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Pack Graphique Los Angeles Vibes</h1>
+        <p>Transformez Los Santos en une véritable carte postale de Los Angeles grâce à des textures 4K, des effets lumineux californiens et une ambiance unique West Coast.</p>
+        <button class="btn" onclick="document.getElementById('buy').scrollIntoView()">Télécharger Maintenant</button>
+      </div>
+      <div>
+        <img src="https://cdn.discordapp.com/attachments/1244663744320114698/1366465069545947267/image.png?ex=68982d04&is=6896db84&hm=10d6abf78da8db01a5b7ed3331f8de5f320707132ecdca90c81a08a846819c3d&" alt="Après" style="width:100%;border-radius:var(--radius);">
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Caractéristiques</h2>
+      <div class="features">
+        <div class="feature">🎨 <b>Textures 4K Ultra-HD</b> Rues dorées, plages infinies, bâtiments légendaires avec un détail ultra-précis.</div>
+        <div class="feature">☀️ <b>Effets de Lumière</b> Ray-Tracing, HDR éclatant et météo dynamique.</div>
+        <div class="feature">🌊 <b>Reflets & Végétation</b> Océan vivant, palmiers réalistes, reflets sur surfaces.</div>
+        <div class="feature">🎶 <b>Bonus Audio</b> Sons moteurs retravaillés, klaxons authentiques, ambiances de rue californiennes.</div>
+        <div class="feature">⚙️ <b>Optimisation</b> Compatible avec la majorité des mods, installation rapide.</div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Galerie</h2>
+      <div class="gallery">
+        <img src="https://i.ibb.co/sdbtqgqz/Capture-decran-2556.png" alt="Aperçu 1">
+        <img src="https://i.ibb.co/Swr4wd5Y/Capture-decran-2597.png" alt="Aperçu 2">
+        <img src="https://i.ibb.co/KjZMGHzn/Capture-decran-2637.png" alt="Aperçu 3">
+        <img src="https://i.ibb.co/1Gt6wLCd/Capture-decran-2661.png" alt="Aperçu 4">
+        <img src="https://i.ibb.co/Y7SdD3bH/Capture-decran-2562.png" alt="Aperçu 5">
+        <img src="https://i.ibb.co/B5tg1RY1/Capture-decran-2560.png" alt="Aperçu 6">
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Vidéo de Présentation</h2>
+      <iframe src="https://www.youtube.com/embed/4hoMV_A4T3Y" allowfullscreen></iframe>
+    </section>
+
+    <section id="avis">
+      <h2>Ressources</h2>
+      <div class="testimonials">
+        <div class="testimonial">NVE , QUANTV , GOSHEN REPLACE & RETEXTURING , VDE RETEXTURING</div>
+      </div>
+    </section>
+
+    <section id="buy" style="text-align:center">
+      <button class="btn" onclick="window.location.href='https://drive.google.com/file/d/1RMGdELomdj9D5YIL-wzpWDoeExGWJVC1/view?usp=sharing'">Télécharger maintenant</button>
+    </section>
+
+    <footer>
+      © MGS 2025 — Tous droits réservés | <a href="#" style="color:var(--muted)">Support</a>
+    </footer>
+  </div>
+</body>
+</html>
